@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <meta name="author" content="" />
+    <title>Demo Numberplates</title>
+
+    <!--fav icon-->
+    <link rel="icon" href="images/fav_icon.png" type="image/x-icon" />
+
+    <!-- Default links -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/bootstrap-selectpicker.css" />
+
+    <!--Plugin Css-->
+    <link href="css/slick.css" rel="stylesheet" type="text/css" />
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/font.css" rel="stylesheet" type="text/css" />
+
+    <!-- custom links -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <header class="hdr"></header>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main>
+      <div class="container-fluid">
+        <div class="tittle">
+          <h1>Number plate builder!</h1>
+          <p>
+            Our online number plate builder is simple, easy and quick. Whether
+            you're ordering a new customised registration plate or you're
+            ordering replacement number plates, our handy builder will help you
+            order in no time.
+          </p>
+        </div>
+        <section class="palte_wrap">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="palte1_modi_wrp">
+                <div class="plate_top_btns">
+                  <a href="#" class="active">Road Legal Plates</a>
+                  <a href="#">Show Plates</a>
+                </div>
+                <hr />
+                <div class="plate_head">
+                  <h2>Select your options</h2>
+                  <p>
+                    Build your number plate below by choosing from the options
+                    and clicking 'Buy Now' to add to basket.
+                  </p>
+                </div>
+                <hr />
+                <form id="plateOptionForm" action="">
+                  <div id="frontOrRearOptions">
+                    <div class="frontOrRearOption">
+                      <label id="bothPlateRadio" class="h-100 checked">
+                        <input
+                          type="radio"
+                          name="plateTypes"
+                          data-show="both"
+                          value="Both Plates"
+                          checked=""
+                        />
+                        Both Plates
+                      </label>
+                    </div>
+                    <div class="frontOrRearOption">
+                      <label id="frontOnlyRadio" class="h-100">
+                        <input
+                          type="radio"
+                          data-show="front"
+                          name="plateTypes"
+                          value="Front Only"
+                        />
+                        Front Only
+                      </label>
+                    </div>
+                    <div class="frontOrRearOption">
+                      <label id="rearOnlyRadio" class="h-100">
+                        <input
+                          type="radio"
+                          data-show="rear"
+                          name="plateTypes"
+                          value="Rear Only"
+                        />
+                        Rear Only
+                      </label>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="accordion" id="plateOptions">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Your Registration
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <input
+                            type="text"
+                            id="reg"
+                            name="reg"
+                            value="YOUR REG"
+                            placeholder="Enter Reg"
+                            class="form-control regInput"
+                            maxlength="8"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          Plate Size
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <select
+                            class="form-select"
+                            name="platesize"
+                            id="plateOptionSelect"
+                          >
+                            <optgroup label="Standard Plate Sizes">
+                              <option value="1021">
+                                STANDARD SIZE (520mm x 111mm)
+                              </option>
+                              <option value="1027">
+                                Standard 4x4 (280mm x 203mm rear)
+                              </option>
+                              <option value="1028">
+                                Large Rear Plate (535mm x 152mm rear)
+                              </option>
+                              <option value="140026">
+                                Short Plate (Max 6 digits) 408mm x 111mm
+                              </option>
+                              <option value="140037">
+                                Short Plate (Max 5 digits) 345mm x 111mm
+                              </option>
+                              <option value="140038">
+                                Short Plate (Max 4 digits) 285mm x 111mm
+                              </option>
+                            </optgroup>
+
+                            <optgroup label="Motorcycle Plate Size">
+                              <option value="1159">
+                                Motorcycle Rear (No Badge, No Border) 228 x 178
+                              </option>
+                              <option value="71260">
+                                Motorcycle Rear (With Badge) 274 x 178
+                              </option>
+                              <option value="71261">
+                                Motorcycle Rear (With Border) 242 x 178
+                              </option>
+                              <option value="71262">
+                                Motorcycle Rear (Badge & Border) 274 x 178
+                              </option>
+                            </optgroup>
+
+                            <optgroup label="Import Plate Size">
+                              <option value="1161">
+                                330mm x 165mm front and rear
+                              </option>
+                              <option value="1162">
+                                330mm x 178mm front and rear
+                              </option>
+                              <option value="1165">
+                                Standard UK front, 330mm x 165mm rear
+                              </option>
+                              <option value="1166">
+                                Standard UK front, 330mm x 178mm rear
+                              </option>
+                            </optgroup>
+
+                            <optgroup label="Model-Specific Plate Size">
+                              <option value="137335">
+                                HEX (LAMBO STYLE) 522 x 111
+                              </option>
+                              <option value="140115">
+                                HEX 6 DIGIT (LAMBO STYLE) 450 x 111
+                              </option>
+                              <option value="140116">
+                                HEX 5 DIGIT (LAMBO STYLE) 390 x 111
+                              </option>
+                              <option value="140117">
+                                HEX 4 DIGIT (LAMBO STYLE) 330 x 111
+                              </option>
+                              <option value="1178">
+                                RANGE ROVER SPORT (2005-2013) 610 x 167
+                              </option>
+                              <option value="1179">
+                                RANGE ROVER SPORT (2ND GEN 2013-2022) 637 x 165
+                              </option>
+                              <option value="137788">
+                                RANGE ROVER SPORT (3RD GEN 2022+) 620 x 175
+                              </option>
+                              <option value="1181">
+                                RANGE ROVER HSE & VOGUE (NOT SPORT) 535 x 152
+                              </option>
+                              <option value="1180">
+                                RANGE ROVER EVOQUE (2011-2018) 585 x 180
+                              </option>
+                              <option value="137789">
+                                RANGE ROVER EVOQUE (2018+) 535 x 152
+                              </option>
+                              <option value="1176">JAGUAR XF 583 x 170</option>
+                              <option value="1177">
+                                JAGUAR XK (2ND GEN 2006+) 565 x 158
+                              </option>
+                              <option value="137784">
+                                JAGUAR F-TYPE 526 x 150
+                              </option>
+                              <option value="1171">
+                                JAGUAR F-PACE 526 x 150
+                              </option>
+                              <option value="1174">
+                                JAGUAR X-TYPE (SAL) 551 x 164
+                              </option>
+                              <option value="1175">
+                                JAGUAR X-TYPE (EST) 583 x 170
+                              </option>
+                              <option value="1182">
+                                ROVER 75 (ZT) 640 x 173
+                              </option>
+                              <option value="1168">
+                                ASTON MARTIN DB9 (DBS) 550 x 170
+                              </option>
+                            </optgroup>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          Text Style
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <select
+                            class="form-select"
+                            name="textStyle"
+                            id="textStyleOptionSelect"
+                          >
+                            <option value="1059" selected>Standard</option>
+                            <option value="1061">3D Gel Domed</option>
+                            <option value="1062">4D Perspex</option>
+                            <option value="157293">5D Gel Perspex</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          Badges Colours
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <div class="badgeColourOptions">
+                            <div class="row g-2">
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="transparent"
+                                  id="noBadgeColour"
+                                  checked
+                                />
+                                <label
+                                  for="noBadgeColour"
+                                  style="background-color: transparent"
+                                  >None</label
+                                >
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1003"
+                                  id="color1003"
+                                />
+                                <label
+                                  for="color1003"
+                                  style="background-color: #000000"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1082"
+                                  id="color1082"
+                                />
+                                <label
+                                  for="color1082"
+                                  style="background-color: #fa251d"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1084"
+                                  id="color1084"
+                                />
+                                <label
+                                  for="color1084"
+                                  style="background-color: #264574"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1088"
+                                  id="color1088"
+                                />
+                                <label
+                                  for="color1088"
+                                  style="background-color: #0093dd"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1092"
+                                  id="color1092"
+                                />
+                                <label
+                                  for="color1092"
+                                  style="background-color: #1aaec9"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1085"
+                                  id="color1085"
+                                />
+                                <label
+                                  for="color1085"
+                                  style="background-color: #3e5f52"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1089"
+                                  id="color1089"
+                                />
+                                <label
+                                  for="color1089"
+                                  style="background-color: #00923f"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1093"
+                                  id="color1093"
+                                />
+                                <label
+                                  for="color1093"
+                                  style="background-color: #afd13e"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1080"
+                                  id="color1080"
+                                />
+                                <label
+                                  for="color1080"
+                                  style="background-color: #dfbb65"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1087"
+                                  id="color1087"
+                                />
+                                <label
+                                  for="color1087"
+                                  style="background-color: #9b4984"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1086"
+                                  id="color1086"
+                                />
+                                <label
+                                  for="color1086"
+                                  style="background-color: #f26438"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1090"
+                                  id="color1090"
+                                />
+                                <label
+                                  for="color1090"
+                                  style="background-color: #fff500"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1091"
+                                  id="color1091"
+                                />
+                                <label
+                                  for="color1091"
+                                  style="background-color: #e493a6"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="1079"
+                                  id="color1079"
+                                />
+                                <label
+                                  for="color1079"
+                                  style="background-color: #ffffff"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="badgeColour"
+                                  value="141617"
+                                  id="color141617"
+                                />
+                                <label
+                                  for="color141617"
+                                  style="background-color: #660033"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+                          <hr />
+                          <div class="badgeOptions">
+                            <div class="row h-100 gy-2 align-items-stretch">
+                              <div class="col-2 h-100">
+                                <label class=""
+                                  ><input
+                                    id="noBadge"
+                                    type="radio"
+                                    name="badge"
+                                    value="0"
+                                    checked=""
+                                  />
+                                  No Badge</label
+                                >
+                              </div>
+
+                              <div class="col-2 h-100">
+                                <label class=""
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83009" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Union-GB-01.png"
+                                    alt="Number Plate Badge 83009"
+                                    title="Number Plate Badge 83009"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83010" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Union-UK-01.png"
+                                    alt="Number Plate Badge 83010"
+                                    title="Number Plate Badge 83010"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83005" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/St-George-ENG-01.png"
+                                    alt="Number Plate Badge 83005"
+                                    title="Number Plate Badge 83005"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83006" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/St-George-UK-01.png"
+                                    alt="Number Plate Badge 83006"
+                                    title="Number Plate Badge 83006"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83004" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Scotland-UK-01.png"
+                                    alt="Number Plate Badge 83004"
+                                    title="Number Plate Badge 83004"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83003" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Scotland-SCO-01.png"
+                                    alt="Number Plate Badge 83003"
+                                    title="Number Plate Badge 83003"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label class="checked"
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83013" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Wales-CYM-01.png"
+                                    alt="Number Plate Badge 83013"
+                                    title="Number Plate Badge 83013"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83014" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Wales-UK-01.png"
+                                    alt="Number Plate Badge 83014"
+                                    title="Number Plate Badge 83014"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83015" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Welsh-Feathers-01.png"
+                                    alt="Number Plate Badge 83015"
+                                    title="Number Plate Badge 83015"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82990" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Cornish-KER-01.png"
+                                    alt="Number Plate Badge 82990"
+                                    title="Number Plate Badge 82990"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82993" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Ireland-IRL-01.png"
+                                    alt="Number Plate Badge 82993"
+                                    title="Number Plate Badge 82993"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82994" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Isle-of-Man-01.png"
+                                    alt="Number Plate Badge 82994"
+                                    title="Number Plate Badge 82994"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82987" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Audi-01.png"
+                                    alt="Number Plate Badge 82987"
+                                    title="Number Plate Badge 82987"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="145537" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Audi-S.png"
+                                    alt="Number Plate Badge 145537"
+                                    title="Number Plate Badge 145537"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132805" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/porsche.png"
+                                    alt="Number Plate Badge 132805"
+                                    title="Number Plate Badge 132805"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="137766" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/porsche-colour-2.png"
+                                    alt="Number Plate Badge 137766"
+                                    title="Number Plate Badge 137766"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82989" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/BMW-01.png"
+                                    alt="Number Plate Badge 82989"
+                                    title="Number Plate Badge 82989"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="133241" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/m-sport-3.png"
+                                    alt="Number Plate Badge 133241"
+                                    title="Number Plate Badge 133241"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82991" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Ford-01.png"
+                                    alt="Number Plate Badge 82991"
+                                    title="Number Plate Badge 82991"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="170575" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/RS-Badge.png"
+                                    alt="Number Plate Badge 170575"
+                                    title="Number Plate Badge 170575"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="133181" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/ferrari-2.png"
+                                    alt="Number Plate Badge 133181"
+                                    title="Number Plate Badge 133181"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132781" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/jaguar-plate-badge-4.png"
+                                    alt="Number Plate Badge 132781"
+                                    title="Number Plate Badge 132781"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82992" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Hyundai-01.png"
+                                    alt="Number Plate Badge 82992"
+                                    title="Number Plate Badge 82992"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="145541" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/N-Performance.png"
+                                    alt="Number Plate Badge 145541"
+                                    title="Number Plate Badge 145541"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82996" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/KIA-01.png"
+                                    alt="Number Plate Badge 82996"
+                                    title="Number Plate Badge 82996"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82997" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Mercedes-01.png"
+                                    alt="Number Plate Badge 82997"
+                                    title="Number Plate Badge 82997"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="137743" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/merc-amg.png"
+                                    alt="Number Plate Badge 137743"
+                                    title="Number Plate Badge 137743"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="133184" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/range-rover.png"
+                                    alt="Number Plate Badge 133184"
+                                    title="Number Plate Badge 133184"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="133186" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/renault.png"
+                                    alt="Number Plate Badge 133186"
+                                    title="Number Plate Badge 133186"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="154147" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/mazda-badge.png"
+                                    alt="Number Plate Badge 154147"
+                                    title="Number Plate Badge 154147"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82998" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Mini-01.png"
+                                    alt="Number Plate Badge 82998"
+                                    title="Number Plate Badge 82998"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83001" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Nissan-01.png"
+                                    alt="Number Plate Badge 83001"
+                                    title="Number Plate Badge 83001"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="144057" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/cupra.png"
+                                    alt="Number Plate Badge 144057"
+                                    title="Number Plate Badge 144057"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="152833" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/lexus-badge-2.png"
+                                    alt="Number Plate Badge 152833"
+                                    title="Number Plate Badge 152833"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83008" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Toyota-01.png"
+                                    alt="Number Plate Badge 83008"
+                                    title="Number Plate Badge 83008"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="165648" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/volvo.png"
+                                    alt="Number Plate Badge 165648"
+                                    title="Number Plate Badge 165648"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="152837" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/volvo-moose.png"
+                                    alt="Number Plate Badge 152837"
+                                    title="Number Plate Badge 152837"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="146604" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/peugeot.png"
+                                    alt="Number Plate Badge 146604"
+                                    title="Number Plate Badge 146604"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83011" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Vauxhall-01.png"
+                                    alt="Number Plate Badge 83011"
+                                    title="Number Plate Badge 83011"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83012" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/VW-01.png"
+                                    alt="Number Plate Badge 83012"
+                                    title="Number Plate Badge 83012"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82985" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Adidas-01_2023-04-05-130514.png"
+                                    alt="Number Plate Badge 82985"
+                                    title="Number Plate Badge 82985"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82986" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Armed-Forces-01.png"
+                                    alt="Number Plate Badge 82986"
+                                    title="Number Plate Badge 82986"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82988" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Autobots-01.png"
+                                    alt="Number Plate Badge 82988"
+                                    title="Number Plate Badge 82988"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82995" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Khanda-01.png"
+                                    alt="Number Plate Badge 82995"
+                                    title="Number Plate Badge 82995"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="82999" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/NHS-01.png"
+                                    alt="Number Plate Badge 82999"
+                                    title="Number Plate Badge 82999"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83000" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Nike-01.png"
+                                    alt="Number Plate Badge 83000"
+                                    title="Number Plate Badge 83000"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83002" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/Olympics-01.png"
+                                    alt="Number Plate Badge 83002"
+                                    title="Number Plate Badge 83002"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="83007" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/The-Doctor-01.png"
+                                    alt="Number Plate Badge 83007"
+                                    title="Number Plate Badge 83007"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132786" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/liverpool-5.png"
+                                    alt="Number Plate Badge 132786"
+                                    title="Number Plate Badge 132786"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132792" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/manchester-united.png"
+                                    alt="Number Plate Badge 132792"
+                                    title="Number Plate Badge 132792"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132799" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/manchester-city.png"
+                                    alt="Number Plate Badge 132799"
+                                    title="Number Plate Badge 132799"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132800" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/arsenal.png"
+                                    alt="Number Plate Badge 132800"
+                                    title="Number Plate Badge 132800"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132801" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/chelsea.png"
+                                    alt="Number Plate Badge 132801"
+                                    title="Number Plate Badge 132801"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132798" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/tottenham-2.png"
+                                    alt="Number Plate Badge 132798"
+                                    title="Number Plate Badge 132798"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="142215" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/everton.png"
+                                    alt="Number Plate Badge 142215"
+                                    title="Number Plate Badge 142215"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132863" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/West-Ham.png"
+                                    alt="Number Plate Badge 132863"
+                                    title="Number Plate Badge 132863"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="147372" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/page-images/newcastle.png"
+                                    alt="Number Plate Badge 147372"
+                                    title="Number Plate Badge 147372"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132937" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/Aston-Villa.png"
+                                    alt="Number Plate Badge 132937"
+                                    title="Number Plate Badge 132937"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132857" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/LEEDS.png"
+                                    alt="Number Plate Badge 132857"
+                                    title="Number Plate Badge 132857"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132867" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/Cetic-2.png"
+                                    alt="Number Plate Badge 132867"
+                                    title="Number Plate Badge 132867"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="132859" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/England-Rugby-2.png"
+                                    alt="Number Plate Badge 132859"
+                                    title="Number Plate Badge 132859"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="150661" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/Ireland-Rugby.png"
+                                    alt="Number Plate Badge 150661"
+                                    title="Number Plate Badge 150661"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="150662" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/Scotland-Rugby.png"
+                                    alt="Number Plate Badge 150662"
+                                    title="Number Plate Badge 150662"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="150663" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/Wales-Rugby.png"
+                                    alt="Number Plate Badge 150663"
+                                    title="Number Plate Badge 150663"
+                                /></label>
+                              </div>
+                              <div class="col-2 h-100">
+                                <label
+                                  ><input
+                                    class="badgeSelected"
+                                    type="radio"
+                                    name="badge"
+                                    value="149577" />
+                                  <img
+                                    src="https://www.demonplates.com/uploads/badges/lions.png"
+                                    alt="Number Plate Badge 149577"
+                                    title="Number Plate Badge 149577"
+                                /></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          Border
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFive"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <div class="borderColourOptions">
+                            <div class="row g-2">
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="transparent"
+                                  id="noBorder"
+                                  checked
+                                />
+                                <label
+                                  for="noBorder"
+                                  style="background-color: transparent"
+                                  >None</label
+                                >
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1063"
+                                  id="border1063"
+                                />
+                                <label
+                                  for="border1063"
+                                  style="background-color: #000000"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1067"
+                                  id="border1067"
+                                />
+                                <label
+                                  for="border1067"
+                                  style="background-color: #fa251d"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1069"
+                                  id="border1069"
+                                />
+                                <label
+                                  for="border1069"
+                                  style="background-color: #264574"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1073"
+                                  id="border1073"
+                                />
+                                <label
+                                  for="border1073"
+                                  style="background-color: #0088bd"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1077"
+                                  id="border1077"
+                                />
+                                <label
+                                  for="border1077"
+                                  style="background-color: #47b6d7"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1070"
+                                  id="border1070"
+                                />
+                                <label
+                                  for="border1070"
+                                  style="background-color: #306241"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1074"
+                                  id="border1074"
+                                />
+                                <label
+                                  for="border1074"
+                                  style="background-color: #00923f"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1078"
+                                  id="border1078"
+                                />
+                                <label
+                                  for="border1078"
+                                  style="background-color: #afd13e"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1065"
+                                  id="border1065"
+                                />
+                                <label
+                                  for="border1065"
+                                  style="background-color: #ab9159"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1072"
+                                  id="border1072"
+                                />
+                                <label
+                                  for="border1072"
+                                  style="background-color: #9b4984"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1071"
+                                  id="border1071"
+                                />
+                                <label
+                                  for="border1071"
+                                  style="background-color: #ff9f55"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1075"
+                                  id="border1075"
+                                />
+                                <label
+                                  for="border1075"
+                                  style="background-color: #fff500"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1076"
+                                  id="border1076"
+                                />
+                                <label
+                                  for="border1076"
+                                  style="background-color: #e493a6"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="1064"
+                                  id="border1064"
+                                />
+                                <label
+                                  for="border1064"
+                                  style="background-color: #ffffff"
+                                ></label>
+                              </div>
+
+                              <div class="col-2">
+                                <input
+                                  type="radio"
+                                  name="borderColour"
+                                  value="141619"
+                                  id="border141619"
+                                />
+                                <label
+                                  for="border141619"
+                                  style="background-color: #660033"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSix">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                        >
+                          Plate Surround
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSix"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingSix"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <div class="surroundOptionsContainer">
+                            <div class="row">
+                              <div class="col-12">
+                                <p>
+                                  Our premium number plate surrounds made from
+                                  robust black plastic and your choice of marque
+                                  for that unique style! £28 each or 2 for £50.
+                                  Only available for standard 520mm x 111mm UK
+                                  plates.
+                                </p>
+                                <img
+                                  src="images/surrounds-promo.png?v=1"
+                                  class="my-3 img-fluid"
+                                  alt="Surround Promo"
+                                />
+                              </div>
+
+                              <div class="col-3">
+                                <select
+                                  class="form-control"
+                                  name="surroundOptionQty"
+                                  id="selectSurroundQty"
+                                >
+                                  <option value="0">None</option>
+                                  <option value="1" selected>1 x</option>
+                                  <option value="2">2 x</option>
+                                </select>
+                              </div>
+
+                              <div class="col-9">
+                                <select
+                                  class="form-control"
+                                  name="surroundOptions"
+                                  id="selectSurround"
+                                >
+                                  <option value="None" selected>
+                                    Select design
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0013_amg.png"
+                                    value="AMG"
+                                  >
+                                    AMG
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/audi.png"
+                                    value="Audi"
+                                  >
+                                    Audi
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0020_sline.png"
+                                    value="Audi S-Line"
+                                  >
+                                    Audi S-Line
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0019_bmw.png"
+                                    value="BMW"
+                                  >
+                                    BMW
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0018_msport.png"
+                                    value="BMW M-Sport"
+                                  >
+                                    BMW M-Sport
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0005_ferrari.png"
+                                    value="Ferrari"
+                                  >
+                                    Ferrari
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0017_ford.png"
+                                    value="Ford"
+                                  >
+                                    Ford
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0016_hyundai.png"
+                                    value="Hyundai"
+                                  >
+                                    Hyundai
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0003_jaguar.png"
+                                    value="Jaguar"
+                                  >
+                                    Jaguar
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0008_kia.png"
+                                    value="Kia"
+                                  >
+                                    Kia
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/lexus.png"
+                                    value="Lexus"
+                                  >
+                                    Lexus
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/Mazda.png"
+                                    value="Mazda"
+                                  >
+                                    Mazda
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0014_mercedes.png"
+                                    value="Mercedes-Benz"
+                                  >
+                                    Mercedes-Benz
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0010_mclaren.png"
+                                    value="McLaren"
+                                  >
+                                    McLaren
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0006_nissan.png"
+                                    value="Nissan"
+                                  >
+                                    Nissan
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0004_porsche.png"
+                                    value="Porsche"
+                                  >
+                                    Porsche
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0015_rangerover.png"
+                                    value="Range Rover"
+                                  >
+                                    Range Rover
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0000_renault.png"
+                                    value="Renault"
+                                  >
+                                    Renault
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0001_skoda.png"
+                                    value="Skoda"
+                                  >
+                                    Skoda
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0009_toyota.png"
+                                    value="Toyota"
+                                  >
+                                    Toyota
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0012_tesla.png"
+                                    value="Tesla"
+                                  >
+                                    Tesla
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0007_vauxhall.png"
+                                    value="Vauxhall"
+                                  >
+                                    Vauxhall
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0011_volkswagen.png"
+                                    value="Volkswagen"
+                                  >
+                                    Volkswagen
+                                  </option>
+                                  <option
+                                    data-image="https://www.demonplates.com/uploads/page-images/0002_volvo.png"
+                                    value="Volvo"
+                                  >
+                                    Volvo
+                                  </option>
+                                </select>
+                              </div>
+
+                              <div class="col-12">
+                                <div
+                                  id="surroundImageContainer"
+                                  class="mt-3 p-1"
+                                  style="display: none; background: #0f0f0f"
+                                >
+                                  <img
+                                    src=""
+                                    id="surroundImage"
+                                    class="img-fluid"
+                                    alt="Selected Surround"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeven">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSeven"
+                          aria-expanded="false"
+                          aria-controls="collapseSeven"
+                        >
+                          Electric Car Plates
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSeven"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingSeven"
+                        data-bs-parent="#plateOptions"
+                      >
+                        <div class="accordion-body">
+                          <select
+                            class="form-select"
+                            name="electricPlateCheck"
+                            id="electricPlateCheck"
+                          >
+                            <option value="">-- Select Plate --</option>
+                            <option value="32084">
+                              STANDARD ELECTRIC (520mm x 111mm)
+                            </option>
+                            <option value="78246">
+                              Large Rear Plate Car Electric (standard front
+                              plate, 535mm x 152mm rear plate)
+                            </option>
+                            <option value="78245">
+                              Standard 4x4 Electric (standard front plate, 280mm
+                              x 203mm rear plate)
+                            </option>
+                            <option value="78247">
+                              Standard UK front, 330mm x 165mm rear Electric
+                              (13" x 6.5")
+                            </option>
+                            <option value="78249">
+                              Standard UK front, 330mm x 178mm rear Electric
+                              (13" x 7")
+                            </option>
+                            <option value="78248">
+                              330mm x 165mm front and rear plates Electric (13"
+                              x 6.5")
+                            </option>
+                            <option value="78250">
+                              330mm x 178mm front and rear plates Electric (13"
+                              x 7")
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <a href="#" class="btn btn-plate-builder mgB" id="reset_Btn"
+                >Reset Design</a
+              >
+            </div>
+            <div class="col-lg-8">
+              <div class="palte1_opt_wrp">
+                <div id="plates">
+                  <div id="platewrp">
+                    <div id="plate_front">
+                      <div class="plate_innr_wrp">
+                        <div id="badgeHolder" class="badgeHolder">
+                          <img src="" alt="badgeHolder" />
+                        </div>
+                        <input type="text" readonly value="YOUR REG" />
+                      </div>
+                      <div class="plate_Surround_img">
+                        <img src="" alt="" />
+                      </div>
+                    </div>
+                    <div id="plate_rear">
+                      <div class="plate_innr_wrp">
+                        <div id="badgeHolder" class="badgeHolder">
+                          <img src="" alt="badgeHolder" />
+                        </div>
+                        <input type="text" readonly value="YOUR REG" />
+                      </div>
+                      <div class="plate_Surround_img">
+                        <img src="" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="plt_price">
+                  <h2>Price: <span id="plt_amount"> £85.50</span></h2>
+                  <button
+                    type="button"
+                    class="mb-4 btn btn-plate-builder"
+                    data-toggle="modal"
+                    data-target="#confModal"
+                  >
+                    BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Main end -->
+
+    <!-- footer start -->
+    <footer class="footer_sec">
+      <div class="container"></div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-selectpicker.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/fontawsome6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
